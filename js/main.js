@@ -1,16 +1,34 @@
 $(function() {
 
-    startSlider = () => {
-        const slider = $('#slider');
-        const images = slider.find('img');
+    /* Main Slider */
+    const slider = $('.main-slider');
+    const images = slider.find('.slider-images img');
+    const dots = slider.find('.slider-dot-navigation .dot');
 
-        let i = 0;
-        let interval = setInterval(() => {
-            let next = (++i % images.length);
-            $(images.get(next - 1)).fadeOut(1000);
-            $(images.get(next)).fadeIn(1000);
-        }, 7000);
-    };
+    function mainSlider() {        
+        images.not(images.first()).css('display', 'none');
+        
+        dots.each(function(index) {
+            $(this).click(changeSlider(images, dots, index));
+        });
+    }
 
-    startSlider();
+    function changeSlider(images, dots, index) {
+        images.not(images.get(index)).fadeOut(700);
+        $(images.get(index)).fadeIn(700);
+
+        dots.removeClass('selected');
+        $(dots.get(index)).addClass('selected');
+    }
+
+    function autoSlider() {
+        const dot = slider.find('.slider-dot-navigation .dot.selected');
+
+        let index = (parseInt(dot.index()) === 2) ? 0 : parseInt(dot.index() + 1);
+        changeSlider(images, dots, index);        
+    }
+    
+    let interval = setInterval(autoSlider, 10000);
+    //mainSlider();
+    
 });
