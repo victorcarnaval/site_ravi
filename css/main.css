@@ -2,70 +2,114 @@
     margin: 0;
     padding: 0;
 }
-
 body {
     font-size: 16px;
+    background-color: #fff;
 }
-
-.container {
-    padding-left: 0.05vw;
-    padding-right: 0.05vw;
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
 }
 
 /* Main Slider */
-
-.main-slider {
+#main-slider {
     width: 100vw;
     height: 100vh;
-    box-sizing: border-box;
-    position: relative;
+    max-width: 100%;
 }
-
-.main-slider > .slider-images {
+#main-slider > .slider-images {
     width: 100%;
     height: 100%;
     position: relative;
     overflow: hidden;
 }
-
-.main-slider > .slider-images > figure > img {
+#main-slider > .slider-images > figure > img {
     position: absolute;
     left: 50%;
     transform: translate(-50%);
     height: 100%;
 }
-
-.main-slider > .slider-images > .slider-content {
+#main-slider > .slider-images > .slider-content {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
-
-.main-slider > .slider-dot-navigation {
+#main-slider > .slider-dot-navigation {
     position: absolute;
     bottom: 15px;
     right: 15px;
 }
-
-.main-slider > .slider-dot-navigation > .dot {
+#main-slider > .slider-dot-navigation > .dot {
     list-style-type: none;
-    width: 15px;
-    height: 15px;
+    width: 10px;
+    height: 10px;
     border: 2px solid #fff;
     border-radius: 100%;
 }
-
-.main-slider > .slider-dot-navigation > .dot.selected {
+#main-slider > .slider-dot-navigation > .dot.selected {
     background-color: #fff;
 }
-
-.main-slider > .slider-dot-navigation > li:hover {
+#main-slider > .slider-dot-navigation > li:hover {
     background-color: #fff;
     transition-duration: 0.2s;
     cursor: pointer;
 }
-
-.main-slider > .slider-dot-navigation > li:not(:last-child) {
+#main-slider > .slider-dot-navigation > li:not(:last-child) {
     margin-bottom: 10px;
+}
+
+/* Navbar */
+.navbar {
+    /* position: relative; */
+    position: sticky;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 75px;
+    padding-right: 15px;
+    padding-left: 15px;
+    border-bottom: 1px solid #e5e5e5;
+    box-sizing: border-box;
+}
+.navbar-sticky {
+    position: fixed;
+    top: 0;
+}
+.navbar .brand {
+    /* float: left; */
+}
+.navbar .brand img {
+    width: 50px;
+    height: 50px;
+}
+.navbar nav ul > li {
+    display: inline-block;
+    list-style-type: none;
+}
+
+/* Couple Intro */
+.intro {
+    padding: 100px 0;
+    display: flex;
+    justify-content: center;
+}
+.couple .couple-groom .couple-groom-photo,
+.couple .couple-bride .couple-bride-photo {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.couple .couple-groom .couple-groom-name,
+.couple .couple-bride .couple-bride-name {
+    margin-top: 35px;
+    text-align: center;
+}
+.couple .couple-groom .couple-groom-name h3,
+.couple .couple-bride .couple-bride-name h3 {
+    text-transform: uppercase;
 }

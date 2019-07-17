@@ -1,34 +1,44 @@
-$(function() {
+$(function () {
 
-    /* Main Slider */
-    const slider = $('.main-slider');
-    const images = slider.find('.slider-images img');
-    const dots = slider.find('.slider-dot-navigation .dot');
+    //Sticky Navbar
+    /*window.onscroll = stickyNavbar;
+    const navbar = document.getElementById('main-navbar');
+    const navbarOffset = navbar.offsetTop;
 
-    function mainSlider() {        
-        images.not(images.first()).css('display', 'none');
-        
-        dots.each(function(index) {
-            $(this).click(changeSlider(images, dots, index));
+    function stickyNavbar() {
+        if (window.pageYOffset >= navbarOffset) {
+            navbar.classList.add('navbar-sticky');
+        } else {
+            navbar.classList.remove('navbar-sticky');
+        }
+    }*/
+
+    const slider = function () {
+        const $slider = $('#main-slider');
+        const $images = $slider.find('.slider-images img');       
+        const $dots = $slider.find('.slider-dot-navigation > .dot');
+
+        //Mostrando apenas a primeira imagem do slider
+        $images.not($images.first()).css('display', 'none');
+
+        //Adicionando o evento de clique no menu do slider
+        $dots.click(function () {
+            const $dot = $(this);
+            const $image = $($images.get($dot.index()));
+
+            if ($image.css('display') === 'none') {
+                $images.filter(':visible').fadeOut(600);
+                $image.fadeIn(600);
+                
+                if (!$dot.hasClass('selected')) {
+                    $dots.filter('.selected').removeClass('selected');
+                    $dot.addClass('selected');
+                }
+            }
         });
-    }
+    };
 
-    function changeSlider(images, dots, index) {
-        images.not(images.get(index)).fadeOut(700);
-        $(images.get(index)).fadeIn(700);
+    //Inicialização
+    slider();
 
-        dots.removeClass('selected');
-        $(dots.get(index)).addClass('selected');
-    }
-
-    function autoSlider() {
-        const dot = slider.find('.slider-dot-navigation .dot.selected');
-
-        let index = (parseInt(dot.index()) === 2) ? 0 : parseInt(dot.index() + 1);
-        changeSlider(images, dots, index);        
-    }
-    
-    let interval = setInterval(autoSlider, 10000);
-    //mainSlider();
-    
 });
