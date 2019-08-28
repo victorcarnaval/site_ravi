@@ -1,16 +1,16 @@
 
 document.addEventListener('DOMContentLoaded', function () {
 
-  const sidenavElem = document.querySelectorAll('.sidenav');
-  const sidenavInstance = M.Sidenav.init(sidenavElem);
+  var sidenavElem = document.querySelectorAll('.sidenav');
+  var sidenavInstance = M.Sidenav.init(sidenavElem);
 
-  const parallaxElem = document.querySelectorAll('.parallax');
-  const parallaxInstance = M.Parallax.init(parallaxElem);
+  var parallaxElem = document.querySelectorAll('.parallax');
+  var parallaxInstance = M.Parallax.init(parallaxElem);
 
   // Countdown
-  const eventDate = new Date('Nov 9, 2019 17:30:00 GMT-0300').getTime();
+  var eventDate = new Date('Nov 9, 2019 17:30:00 GMT-0300').getTime();
 
-  const timer = setInterval(function () {
+  var timer = setInterval(function () {
 
     let now = new Date().getTime();
     let distance = eventDate - now;

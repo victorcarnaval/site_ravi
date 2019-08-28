@@ -4,17 +4,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
   <title>Site dos Noivos - Rafaela e Victor</title>
 
-  <!-- CSS  -->
+  <link href="css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection">
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Qwigley&display=swap" rel="stylesheet">
-  <link href="css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection" />
-  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Poppins:300|Qwigley|Raleway&display=swap" rel="stylesheet">
 </head>
 
 <body>
-
   <div id="navbar" class="navbar-fixed">
     <nav class="transparent" role="navigation">
       <div class="nav-wrapper container">
@@ -30,30 +29,31 @@
     </nav>
   </div>
 
-  <div id="event-date" class="parallax-container full-height valign-wrapper">
-    <div class="container white-text">
+  <div class="parallax-container full-height valign-wrapper">
+    <header class="container white-text">
       <h1 class="center-align">Rafaela e Victor</h1>
-    </div>
-    <div class="parallax"><img src="images/background6.jpg" alt="Unsplashed background img 1"></div>
+    </header>
+    <div class="parallax"><img src="images/background6.jpg" alt="Imagem dos noivos se beijando"></div>
   </div>
 
-  <section class="section valign-wrapper center-align">
-    <div class="container">
-      <h2>Nossa História</h2>
-      <i class="material-icons">all_inclusive</i>
-      <p>One common flaw we've seen in many frameworks is a lack of support for truly responsive text. While elements on
+  <section id="about-us" class="section valign-wrapper white">
+    <div class="container center-align">
+      <h3 class="grey-text text-darken-4">Nossa História</h3>
+      <p class="grey-text text-darken-1">One common flaw we've seen in many frameworks is a lack of support for truly responsive text.
+        While elements on
         the page resize fluidly, text still resizes on a fixed basis. To ameliorate this problem, for text heavy pages,
         we've created a class that fluidly scales text size and line-height to optimize readability for the user. Line
         length stays between 45-80 characters and line height scales to be larger on smaller screens.
 
         To see Flow Text in action, slowly resize your browser and watch the size of this text body change! Use the
-        button above to toggle off/on flow-text to see the difference!</p>
-      <img src="images/marker_love.png" alt="">
+        button above to toggle off/on flow-text to see the difference!
+      </p>
+      <img src="images/marker_love.png" alt="Delimitador">
     </div>
   </section>
 
   <section class="parallax-container valign-wrapper">
-    <div class="container">
+    <div class="container white-text">
       <div class="row">
         <p id="countdown">
           <span id="timer-days"></span>
@@ -66,16 +66,25 @@
     <div class="parallax"><img src="images/background7.jpg" alt=""></div>
   </section>
 
-  <section class="section valign-wrapper center-align">
+  <section class="section teal lighten-2">
     <div class="container">
       <div class="row">
-        <h2>Galeria</h2>
+        <h3>Galeria</h3>
         <p></p>
       </div>
     </div>
   </section>
 
-  <div class="parallax-container full-height valign-wrapper">
+  <section class="section white">
+    <div class="container">
+      <div class="row">
+        <h3>Presente</h3>
+        <p></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="parallax-container full-height valign-wrapper">
     <div class="section no-pad-bot">
       <div class="container">
         <div class="row center">
@@ -84,51 +93,10 @@
       </div>
     </div>
     <div class="parallax"><img src="images/background5.jpg" alt="Unsplashed background img 3"></div>
-  </div>
+  </section>
 
-  <footer class="page-footer teal">
-    <div class="container">
-      <div class="row">
-        <div class="col l6 s12">
-          <h5 class="white-text">Company Bio</h5>
-          <p class="grey-text text-lighten-4">We are a team of college students working on this project like it's our
-            full time job. Any amount would help support and continue development on this project and is greatly
-            appreciated.</p>
-
-
-        </div>
-        <div class="col l3 s12">
-          <h5 class="white-text">Settings</h5>
-          <ul>
-            <li><a class="white-text" href="#!">Link 1</a></li>
-            <li><a class="white-text" href="#!">Link 2</a></li>
-            <li><a class="white-text" href="#!">Link 3</a></li>
-            <li><a class="white-text" href="#!">Link 4</a></li>
-          </ul>
-        </div>
-        <div class="col l3 s12">
-          <h5 class="white-text">Connect</h5>
-          <ul>
-            <li><a class="white-text" href="#!">Link 1</a></li>
-            <li><a class="white-text" href="#!">Link 2</a></li>
-            <li><a class="white-text" href="#!">Link 3</a></li>
-            <li><a class="white-text" href="#!">Link 4</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-    <div class="footer-copyright">
-      <div class="container">
-        Made by <a class="brown-text text-lighten-3" href="http://materializecss.com">Materialize</a>
-      </div>
-    </div>
-  </footer>
-
-
-  <!--  Scripts-->
   <script src="js/materialize.min.js"></script>
   <script src="js/init.js"></script>
-
 </body>
 
 </html>

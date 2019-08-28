@@ -1,3 +1,12 @@
+/* Basics */
+h2, h3, h4, h5 {    
+    font-family: 'Poppins', sans-serif;    
+}
+p {
+    font-family: 'Raleway', sans-serif;
+    line-height: 25px;
+}
+
 /* Helpers */
 .full-height {
     height: 100vh;
@@ -13,9 +22,19 @@
     -webkit-box-shadow: none;
 }
 
+/* About Us */
+#about-us {
+    padding-top: 150px;
+    padding-bottom: 150px;
+}
+#about-us p {
+    margin: 50px 0;
+}
+
 /* Countdown */
 #countdown {
     text-align: center;
+    font-family: 'Open Sans', sans-serif;
     font-size: 4rem;
 }
 #countdown span > span{
