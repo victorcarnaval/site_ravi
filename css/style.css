@@ -1,10 +1,16 @@
+::selection {
+    background: #f3ddce;
+    color: #fff;
+}
 /* Basics */
-h2, h3, h4, h5 {    
-    font-family: 'Poppins', sans-serif;    
+h2 {    
+    font-family: 'Poppins', sans-serif;
+    font-size: 30px;
 }
 p {
     font-family: 'Raleway', sans-serif;
-    line-height: 25px;
+    color: #949494;
+    line-height: 27px;
 }
 
 /* Helpers */
@@ -22,21 +28,68 @@ p {
     -webkit-box-shadow: none;
 }
 
+/* Header */
+#header-title {
+    font-size: 10rem;
+    font-family: 'Qwigley', cursive;
+}
+
 /* About Us */
 #about-us {
-    padding-top: 150px;
-    padding-bottom: 150px;
+    padding-top: 140px;
+    padding-bottom: 140px;
+}
+#about-us h2 {
+    margin-bottom: 30px;
 }
 #about-us p {
-    margin: 50px 0;
+    margin-bottom: 40px;
 }
 
 /* Countdown */
 #countdown {
+    font-family: 'Poppins', sans-serif;
+    font-size: 57px;
+    color: #fff;
     text-align: center;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 4rem;
 }
 #countdown span > span{
     font-size: 1rem;
+}
+
+/* Gallery */
+.gallery {
+    background-color: #faebe3;
+}
+.gallery .gallery-title {    
+    padding-top: 125px;
+    padding-bottom: 90px;
+}
+.gallery .gallery-title h2 {
+    margin-bottom: 30px;
+}
+.gallery .gallery-images {
+    padding-bottom: 137px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.gallery .gallery-images img {
+    margin: 0 30px 30px 0;
+    width: 250px;
+}
+
+/* Gifts List */
+.gifts-list {
+    padding-bottom: 167px;
+}
+.gifts-list .gifts-list-title {
+    padding-top: 130px;
+    padding-bottom: 65px;
+}
+
+.gifts-list .gift-item:hover .cls-1 {
+    fill: #000;
+    transition-duration: 0.25s;
 }

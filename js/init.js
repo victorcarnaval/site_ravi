@@ -7,6 +7,9 @@ document.addEventListener('DOMContentLoaded', function () {
   var parallaxElem = document.querySelectorAll('.parallax');
   var parallaxInstance = M.Parallax.init(parallaxElem);
 
+  var materialboxElem = document.querySelectorAll('.materialboxed');
+  var materialboxInstance = M.Materialbox.init(materialboxElem);
+
   // Countdown
   var eventDate = new Date('Nov 9, 2019 17:30:00 GMT-0300').getTime();
 
