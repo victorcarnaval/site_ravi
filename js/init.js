@@ -48,4 +48,25 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   }, 1000);
 
+  window.onscroll = function () { scrollFunction() };
+
+  function scrollFunction() {
+    var btn = document.querySelector('.fixed-action-btn');
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+      btn.classList.remove('hide');
+      btn.classList.add('show');
+    } else {
+      btn.classList.remove('show');
+      btn.classList.add('hide');
+    }
+  }
+
+  var links = document.getElementsByClassName('scroll-smooth');
+  for (var i = 0; i < links.length; i++) {
+    links[i].addEventListener('click', function (e) {
+      e.preventDefault();
+      document.querySelector(this.dataset.anchor).scrollIntoView({ behavior: 'smooth' });
+    });
+  };
+
 });

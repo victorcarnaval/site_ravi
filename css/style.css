@@ -1,5 +1,8 @@
+html {
+    scroll-behavior: smooth;
+}
 ::selection {
-    background: #f3ddce;
+    background: #2196F3;
     color: #fff;
 }
 /* Basics */
@@ -94,7 +97,16 @@
     background-color: #fff;
 }
 @media screen and (max-width: 490px) {
-    .header-title .and { display: block }
+    .header-title { font-size: 3.5rem }
+    .header-text { font-size: 3rem }
+}
+@media screen and (max-width: 400px) {
+    .header-title { font-size: 3rem }
+    .header-text { font-size: 2.8rem }
+}
+@media screen and (max-width: 350px) {
+    .header-title { font-size: 2.8rem }
+    .header-text { font-size: 2.4rem }
 }
 
 /* About Us */
@@ -178,4 +190,19 @@
 }
 @media screen and (max-width: 490px) {
     .footer h1 { font-size: 5rem }
+}
+
+/* Animations */
+.animated {
+    animation: fadeIn 1s ease-in-out both;
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+		transform: translate3d(0, -20%, 0);
+	}
+	to {
+		opacity: 1;
+		transform: translate3d(0, 0, 0);
+	}
 }

@@ -20,23 +20,37 @@
       <div class="nav-wrapper container">
         <a class="brand-logo" href="">Rafaela e Victor</a>
         <ul class="right hide-on-med-and-down">
-          <li><a href="#">História</a></li>
-          <li><a href="#">Contador</a></li>
-          <li><a href="#">Ensaio</a></li>
+          <li><a class="scroll-smooth" data-anchor="#section-aboutus">Nossa História</a></li>
+          <li><a class="scroll-smooth" data-anchor="#section-countdown">Contador</a></li>
+          <li><a class="scroll-smooth" data-anchor="#section-gallery">Nosso Ensaio</a></li>
+          <li><a class="scroll-smooth" data-anchor="#section-gift-list">Lista de Presentes</a></li>
+          <li><a class="scroll-smooth waves-effect waves-light btn blue white-text" data-anchor="#section-rvsp">RVSP</a>
+          </li>
         </ul>
 
         <ul id="nav-mobile" class="sidenav">
-          <li><a href="#">Navbar Link</a></li>
+          <li><a class="scroll-smooth" data-anchor="#section-aboutus">Nossa História</a></li>
+          <li><a class="scroll-smooth" data-anchor="#section-countdown">Contador</a></li>
+          <li><a class="scroll-smooth" data-anchor="#section-gallery">Nosso Ensaio</a></li>
+          <li><a class="scroll-smooth" data-anchor="#section-gift-list">Lista de Presentes</a></li>
+          <li><a class="scroll-smooth waves-effect waves-light btn blue white-text" data-anchor="#section-rvsp">RVSP</a>
+          </li>
         </ul>
         <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
       </div>
     </nav>
   </div>
 
+  <div class="fixed-action-btn hide">
+    <a class="btn-floating waves-effect waves-light btn-large blue scroll-smooth" data-anchor="body">
+      <i class="material-icons large">keyboard_arrow_up</i>
+    </a>
+  </div>
+
   <div class="parallax-container full-height valign-wrapper">
     <header class="container white-text center-align">
       <div class="header-content">
-        <div class="divider-svg divider-inverse">
+        <div class="divider-svg divider-inverse animated">
 
           <svg width="281px" height="51px" viewBox="0 0 281 51" version="1.1" xmlns="http://www.w3.org/2000/svg"
             xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -47,14 +61,14 @@
             </g>
           </svg>
         </div>
-        <h2 class="header-text">Estamos nos casando!</h2>
-        <h1 class="header-title center-align">
+        <h2 class="header-text animated" style="animation-delay: 0.5s">Estamos nos casando!</h2>
+        <h1 class="header-title center-align animated" style="animation-delay: 1s">
           <span class="name">Rafaela</span>
           <span class="and">&</span>
           <span class="name">Victor</span>
         </h1>
-        <p class="header-date"><span>09.11.2019</span></p>
-        <div class="divider-svg">
+        <p class="header-date animated" style="animation-delay: 1.5s"><span>09.11.2019</span></p>
+        <div class="divider-svg animated" style="animation-delay: 2s">
 
           <svg width="281px" height="51px" viewBox="0 0 281 51" version="1.1" xmlns="http://www.w3.org/2000/svg"
             xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -67,21 +81,24 @@
         </div>
       </div>
     </header>
-    <div class="parallax"><img src="images/background6.jpg" alt="Imagem dos noivos se beijando"></div>
+    <div class="parallax"><img src="images/background1.jpg" alt="Imagem dos noivos se beijando"></div>
   </div>
 
-  <section class="about-us section valign-wrapper white">
+  <section id="section-aboutus" class="about-us section valign-wrapper white">
     <div class="container center-align">
       <div class="section-title">
         <h2 class="title grey-text text-darken-4">Nossa História</h2>
-        <p class="paragraph">Há quatro anos atrás iniciava-se uma linda história de amor....
-        </p>
+        <p class="paragraph">Nossa história de amor iniciou na faculdade, em 2015. Nós dois, calouros de um curso de
+          informática, fomos selecionados a fazer parte do mesmo grupo de atividades durante todo o semestre. E foi a
+          partir deste momento, que a nossa história começou. Neste mesmo ano, conhecemos a
+          <strong>Jesus</strong> e de lá para cá nossa trajetória tem mudado para um rumo diferente. Ele nos tem abençoado
+          grandemente e uma prova disso é nosso casamento que está chegando...</p>
       </div>
       <img src="images/marker_love.png" alt="Imagem da palavra em inglês 'love'">
     </div>
   </section>
 
-  <section class="parallax-container valign-wrapper">
+  <section id="section-countdown" class="parallax-container valign-wrapper">
     <div class="container">
       <div class="row">
         <ul class="countdown white-text center-align">
@@ -100,10 +117,10 @@
         </ul>
       </div>
     </div>
-    <div class="parallax"><img src="images/background7.jpg" alt=""></div>
+    <div class="parallax"><img src="images/background4.jpg" alt=""></div>
   </section>
 
-  <section class="section gallery blue lighten-5">
+  <section id="section-gallery" class="section gallery blue lighten-5">
     <div class="container center-align">
       <div class="row">
         <div class="gallery-title">
@@ -116,21 +133,17 @@
       </div>
       <div class="row">
         <div class="carousel">
-          <img class="carousel-item" src="images/background1.jpg" alt="" title="">
-          <img class="carousel-item" src="images/background2.jpg" alt="" title="">
-          <img class="carousel-item" src="images/background3.jpg" alt="" title="">
-          <img class="carousel-item" src="images/background4.jpg" alt="" title="">
-          <img class="carousel-item" src="images/background5.jpg" alt="" title="">
           <img class="carousel-item" src="images/background6.jpg" alt="" title="">
           <img class="carousel-item" src="images/background7.jpg" alt="" title="">
           <img class="carousel-item" src="images/background8.jpg" alt="" title="">
-          <img class="carousel-item" src="images/background1.jpg" alt="" title="">
+          <img class="carousel-item" src="images/background9.jpg" alt="" title="">
+          <img class="carousel-item" src="images/background10.jpg" alt="" title="">
         </div>
       </div>
     </div>
   </section>
 
-  <section class="gift-list valign-wrapper grey darken-4">
+  <section id="section-gift-list" class="gift-list valign-wrapper grey darken-4">
     <div class="container">
       <div class="row">
         <h2 class="title white-text">Lista de Presentes</h2>
@@ -142,7 +155,7 @@
     </div>
   </section>
 
-  <section class="parallax-container full-height valign-wrapper footer">
+  <section id="section-rvsp" class="parallax-container full-height valign-wrapper footer">
     <div class="container center-align">
       <div class="row">
         <h1 class="white-text">Esperamos por você!</h1>
@@ -154,7 +167,7 @@
           target="_blank">Confirme sua presença</a>
       </div>
     </div>
-    <div class="parallax"><img src="images/background5.jpg" alt="Unsplashed background img 3"></div>
+    <div class="parallax"><img src="images/background9.jpg" alt=""></div>
   </section>
 
   <script src="js/materialize.min.js"></script>
