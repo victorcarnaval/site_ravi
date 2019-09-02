@@ -3,11 +3,11 @@
     color: #fff;
 }
 /* Basics */
-h2 {    
+.title {    
     font-family: 'Poppins', sans-serif;
     font-size: 30px;
 }
-p {
+.paragraph {
     font-family: 'Raleway', sans-serif;
     color: #949494;
     line-height: 27px;
@@ -16,6 +16,10 @@ p {
 /* Helpers */
 .full-height {
     height: 100vh;
+}
+.section {
+    padding-top: 140px;
+    padding-bottom: 140px;
 }
 
 /* Navbar */
@@ -29,67 +33,126 @@ p {
 }
 
 /* Header */
-#header-title {
-    font-size: 10rem;
-    font-family: 'Qwigley', cursive;
+.header-content {
+    max-width: 500px;
+    margin: 0 auto;
+}
+.divider-svg {
+    margin: 15px 0;
+}
+.divider-inverse {
+    transform: scaleY(-1);
+}
+.header-text {
+    color: #fff;
+    font-size: 3.5rem;
+    font-family: 'Dancing Script', cursive;
+    margin: 0;
+}
+.header-title {
+    margin: 0;
+    font-family: 'Open Sans', cursive;
+}
+.header-title .name {
+    font-weight: bold;
+}
+.header-title .and {
+    font-weight: 100;
+    font-size: 3.3rem; 
+}
+.header-date {    
+    margin: 0;
+    overflow: hidden;
+    font-size: 2rem;
+}
+.header-date span {
+    position: relative;
+    display: inline-block;
+}
+.header-date span:before {
+    right: 100%;
+    margin-right: 1rem;
+}
+.header-date span::after {
+    left: 100%;
+    margin-left: 1rem;
+}
+.header-date span:before, .header-date span:after {
+    position: absolute;
+    content: '';
+    display: block;
+    top: 50%;
+    height: 1px;
+    width: 100px;
+    background-color: #fff;
 }
 
 /* About Us */
-#about-us {
-    padding-top: 140px;
-    padding-bottom: 140px;
-}
-#about-us h2 {
+.about-us h2 {
     margin-bottom: 30px;
 }
-#about-us p {
+.about-us p {
     margin-bottom: 40px;
 }
 
 /* Countdown */
-#countdown {
+.countdown {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.countdown > li {
+    width: 150px;
+}
+.countdown > li > p{
     font-family: 'Poppins', sans-serif;
     font-size: 57px;
     color: #fff;
     text-align: center;
+    margin-bottom: 0;
 }
-#countdown span > span{
+.countdown span {
     font-size: 1rem;
 }
 
 /* Gallery */
 .gallery {
-    background-color: #faebe3;
+    padding-bottom: 0px;
 }
-.gallery .gallery-title {    
-    padding-top: 125px;
-    padding-bottom: 90px;
+.gallery .gallery-title {
+    margin-bottom: 50px;
 }
 .gallery .gallery-title h2 {
     margin-bottom: 30px;
 }
-.gallery .gallery-images {
-    padding-bottom: 137px;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
+.gallery p cite {
+    font-weight: bold;
 }
-.gallery .gallery-images img {
-    margin: 0 30px 30px 0;
-    width: 250px;
+.carousel .carousel-item {
+    width: 400px;
+    height: 250px;
 }
 
-/* Gifts List */
-.gifts-list {
-    padding-bottom: 167px;
+/* Gift List */
+.gift-list {
+    padding-top: 20px;
 }
-.gifts-list .gifts-list-title {
-    padding-top: 130px;
-    padding-bottom: 65px;
+.gift-list .gift-list-item {
+    width: 100%;
+    height: 100%;
+}
+.gift-list .gift-list-item:hover .cls-1 {
+    fill: #fff;
+    transition-duration: 0.2s;
 }
 
-.gifts-list .gift-item:hover .cls-1 {
-    fill: #000;
-    transition-duration: 0.25s;
+/* Footer */
+.footer h1 {
+    font-size: 8rem;
+    font-family: 'Dancing Script', cursive;
+}
+.footer p {
+    color: #fff;
 }

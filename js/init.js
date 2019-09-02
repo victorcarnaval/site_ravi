@@ -10,23 +10,38 @@ document.addEventListener('DOMContentLoaded', function () {
   var materialboxElem = document.querySelectorAll('.materialboxed');
   var materialboxInstance = M.Materialbox.init(materialboxElem);
 
+  var carouselElem = document.querySelectorAll('.carousel');
+  var carouselInstance = M.Carousel.init(carouselElem);
+
   // Countdown
   var eventDate = new Date('Nov 9, 2019 17:30:00 GMT-0300').getTime();
 
   var timer = setInterval(function () {
 
-    let now = new Date().getTime();
-    let distance = eventDate - now;
+    var now = new Date().getTime();
+    var distance = eventDate - now;
+    var labelPortuguese = { days: 'dia', hours: 'hora', mins: 'minuto', secs: 'segundo' };
 
-    let days = Math.floor(distance / (1000 * 60 * 60 * 24));
-    let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    let mins = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-    let secs = Math.floor((distance % (1000 * 60)) / 1000);
+    var time = {
+      days: Math.floor(distance / (1000 * 60 * 60 * 24)),
+      hours: Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
+      mins: Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)),
+      secs: Math.floor((distance % (1000 * 60)) / 1000)
+    };
 
-    document.getElementById('timer-days').innerHTML = ('0' + days).slice(-2) + '&nbsp;<span>dia(s)</span>';
-    document.getElementById('timer-hours').innerHTML = ('0' + hours).slice(-2) + '&nbsp;<span>hora(s)</span>';
-    document.getElementById('timer-mins').innerHTML = ('0' + mins).slice(-2) + '&nbsp;<span>minuto(s)</span>';
-    document.getElementById('timer-secs').innerHTML = ('0' + secs).slice(-2) + '&nbsp;<span>segundo(s)</span>';
+    var parentElems = {
+      days: document.getElementsByClassName('countdown-days')[0],
+      hours: document.getElementsByClassName('countdown-hours')[0],
+      mins: document.getElementsByClassName('countdown-minutes')[0],
+      secs: document.getElementsByClassName('countdown-seconds')[0],
+    };
+
+    for (var key in parentElems) {
+      var value = parentElems[key].getElementsByTagName('p')[0];
+      var label = parentElems[key].getElementsByTagName('span')[0];
+      value.innerText = ('0' + time[key]).slice(-2);
+      label.innerText = (time[key] < 2) ? labelPortuguese[key] : labelPortuguese[key] + 's';
+    }
 
     if (distance <= 0) {
       clearInterval(timer);
