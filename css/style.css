@@ -31,6 +31,13 @@
     box-shadow: none;
     -webkit-box-shadow: none;
 }
+#navbar .brand-logo {
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.5rem;
+}
+#navbar a {
+    color: #333;
+}
 
 /* Header */
 .header-content {
@@ -86,6 +93,9 @@
     width: 100px;
     background-color: #fff;
 }
+@media screen and (max-width: 490px) {
+    .header-title .and { display: block }
+}
 
 /* About Us */
 .about-us h2 {
@@ -116,10 +126,13 @@
 .countdown span {
     font-size: 1rem;
 }
+@media screen and (max-width: 335px) {
+    .countdown > li { width: 100px }
+}
 
 /* Gallery */
 .gallery {
-    padding-bottom: 0px;
+    padding-bottom: 5px;
 }
 .gallery .gallery-title {
     margin-bottom: 50px;
@@ -137,15 +150,16 @@
 
 /* Gift List */
 .gift-list {
-    padding-top: 20px;
+    padding: 20px 0;
 }
-.gift-list .gift-list-item {
-    width: 100%;
-    height: 100%;
+.gift-list h2 {
+    margin-bottom: 0;
 }
-.gift-list .gift-list-item:hover .cls-1 {
-    fill: #fff;
-    transition-duration: 0.2s;
+.gift-list p {
+    margin-top: 5px;
+}
+.gift-list a {
+    margin-top: 20px;
 }
 
 /* Footer */
@@ -155,4 +169,13 @@
 }
 .footer p {
     color: #fff;
+}
+@media screen and (max-width: 1180px) {
+    .footer h1 { font-size: 7rem }
+}
+@media screen and (max-width: 600px) {
+    .footer h1 { font-size: 6rem }
+}
+@media screen and (max-width: 490px) {
+    .footer h1 { font-size: 5rem }
 }
